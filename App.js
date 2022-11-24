@@ -19,6 +19,11 @@ export default function App() {
 			{ text: entredText, id: Math.random().toString() },
 		]);
 
+	const handleDeleteGoal = id => {
+		const newCourseGoals = courseGoals.filter(goal => goal.id !== id);
+		setCourseGoals(currentCourseGoals => newCourseGoals);
+	};
+	//	JSX Rendering
 	return (
 		<View style={styles.appContainer}>
 			{/* Goal input */}
@@ -27,7 +32,9 @@ export default function App() {
 			<View style={styles.goalsContainer}>
 				<FlatList
 					data={courseGoals}
-					renderItem={itemData => <GoalItem text={itemData.item.text} />}
+					renderItem={itemData => (
+						<GoalItem item={itemData.item} onDeleteGoal={handleDeleteGoal} />
+					)}
 					keyExtractor={item => item.id}
 					alwaysBounceVertical={false}
 				/>

@@ -15,7 +15,7 @@ function GoalInput({ OnAddNewGoal }) {
 		OnAddNewGoal(entredText);
 		setEntredText('');
 	};
-
+	//	JSX Rendering
 	return (
 		<View style={styles.inputContainer}>
 			<TextInput
