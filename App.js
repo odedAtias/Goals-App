@@ -25,9 +25,9 @@ export default function App() {
 		setCourseGoals(currentCourseGoals => newCourseGoals);
 	};
 
-	const handleGoToAddGoal = () => {
-		setModalIsVisible(true);
-	};
+	const handleModalVisible = () => setModalIsVisible(true);
+
+	const handleOffModalVisible = () => setModalIsVisible(false);
 
 	//	JSX Rendering
 	return (
@@ -36,10 +36,14 @@ export default function App() {
 			<Button
 				title='Add new goal'
 				color='#5e0acc'
-				onPress={handleGoToAddGoal}
+				onPress={handleModalVisible}
 			/>
 			{/* Goal input */}
-			<GoalInput OnAddNewGoal={handleNewGoal} isVisible={modalIsVisible} />
+			<GoalInput
+				OnAddNewGoal={handleNewGoal}
+				isVisible={modalIsVisible}
+				OffModalVisible={handleOffModalVisible}
+			/>
 			{/* Goals List*/}
 			<View style={styles.goalsContainer}>
 				<FlatList
