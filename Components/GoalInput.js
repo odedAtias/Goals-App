@@ -1,10 +1,10 @@
 //  Hooks components imports
 import { useState } from 'react';
 //  Core components imports
-import { Button, TextInput, View, StyleSheet } from 'react-native';
+import { Button, TextInput, View, StyleSheet, Modal } from 'react-native';
 
 //  GoalInput component
-function GoalInput({ OnAddNewGoal }) {
+function GoalInput({ OnAddNewGoal, isVisible }) {
 	//  GoalInput state
 	const [entredText, setEntredText] = useState('');
 
@@ -17,15 +17,17 @@ function GoalInput({ OnAddNewGoal }) {
 	};
 	//	JSX Rendering
 	return (
-		<View style={styles.inputContainer}>
-			<TextInput
-				style={styles.textInput}
-				placeholder='Write new goal'
-				onChangeText={handleChangeText}
-				value={entredText}
-			/>
-			<Button title='Add goal' onPress={handleAddGoal} />
-		</View>
+		<Modal visible={isVisible} animationType='slide'>
+			<View style={styles.inputContainer}>
+				<TextInput
+					style={styles.textInput}
+					placeholder='Write new goal'
+					onChangeText={handleChangeText}
+					value={entredText}
+				/>
+				<Button title='Add goal' onPress={handleAddGoal} />
+			</View>
+		</Modal>
 	);
 }
 
