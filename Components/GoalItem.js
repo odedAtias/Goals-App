@@ -22,16 +22,15 @@ function GoalItem({ item, onDeleteGoal }) {
 const styles = StyleSheet.create({
 	goalItem: {
 		margin: 10,
-
 		borderRadius: 6,
-		backgroundColor: '#5e0acc',
+		backgroundColor: '#ccd1d9',
 	},
 	pressedItem: {
 		opacity: 0.4,
 	},
 	goalText: {
 		padding: 8,
-		color: '#fff',
+		color: '#000',
 	},
 });
 

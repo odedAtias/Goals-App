@@ -45,7 +45,7 @@ function GoalInput({ OnAddNewGoal, isVisible, OffModalVisible }) {
 						<Button
 							title='Add goal'
 							onPress={handleAddGoal}
-							color={'#bb86fc'}
+							color={'#71b59c'}
 						/>
 					</View>
 					{/* Second button container */}
@@ -53,7 +53,7 @@ function GoalInput({ OnAddNewGoal, isVisible, OffModalVisible }) {
 						<Button
 							title='Cancel'
 							onPress={OffModalVisible}
-							color={'#bb86fc'}
+							color={'#e5445d'}
 						/>
 					</View>
 				</View>
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
 		borderBottomWidth: 1,
 		borderBottomColor: '#ccc',
 		padding: 16,
-		backgroundColor: '#121212',
+		backgroundColor: '#141a30',
 	},
 	textInput: {
 		borderBottomWidth: 1,
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
 	},
 	buttonsContainer: {
 		flexDirection: 'row',
-		marginTop: 16,
+		marginTop: 20,
 	},
 	button: {
 		width: '30%',
