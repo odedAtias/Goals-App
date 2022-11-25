@@ -1,7 +1,8 @@
 # Goals-App 🎯
+
 Nice implementation of goals mobile app
 
-![Goals](Goals.png)
+![Goals.png](Goals.png)
 
 ## Technologies
 
