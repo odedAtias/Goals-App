@@ -9,6 +9,7 @@ The purpose of this project is to learn well the basics of the React Native.
 ## Technologies
 
 👉 REACT Native
+👉 Expo cli
 
 ## Implementation Remarks
 
